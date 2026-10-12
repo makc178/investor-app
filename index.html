@@ -1,6 +1,6 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0B1426"><meta name="robots" content="noindex,nofollow">
-<title>Инвестор</title><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=a6e50c5"><link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png?v=a6e50c5"><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=a6e50c5"><link rel="manifest" href="manifest.webmanifest?v=a6e50c5">
+<title>Инвестор</title><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=25b02e0"><link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png?v=25b02e0"><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=25b02e0"><link rel="manifest" href="manifest.webmanifest?v=25b02e0">
 <meta name="apple-mobile-web-app-title" content="Инвестор"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
 <style>
 :root{--bg:#0A0F1C;--pan:#111827;--line:#1F2937;--ink:#E5E7EB;--mut:#94A3B8;--dim:#64748B;--au:#D4AF5A;--au2:#F3D98B;--g:#22C55E;--r:#EF4444;--gr:#64748B}
@@ -81,15 +81,15 @@ a.tk,.lnk{color:inherit;text-decoration:none;cursor:pointer}a.tk:hover,.lnk:hove
 .sc{position:relative;height:4px;border-radius:2px;background:#1a2333;margin:16px 4px 16px}.sc .z{position:absolute;top:0;bottom:0;background:rgba(212,175,90,.45)}.sc .s,.sc .tg{position:absolute;top:-3px;width:2px;height:10px}.sc .s{background:#B85C5C}.sc .tg{background:var(--g)}.sc .mk{position:absolute;top:-5px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--ink);border:2px solid var(--au)}.sc .lb{position:absolute;top:9px;font-size:10px;color:var(--mut);transform:translateX(-50%);white-space:nowrap}.sc .lb.l{transform:none}.sc .lb.r{transform:translateX(-100%)}.pxr{display:flex;align-items:center;gap:10px}.pxr .sc{flex:1}
 .at{font-size:12px;border-top:1px solid #1a2333;padding-top:6px;margin-top:2px}.at .q{font-style:italic;opacity:.85;margin:2px 0}
 </style></head><body>
-<div id="pin"><div class="wrap"><section class="brand"><img src="icon-512.png?v=a6e50c5" alt="Инвестор"><div class="word">ИНВЕСТОР</div><div class="rule"></div><div class="tag">ЛИЧНЫЙ КАБИНЕТ</div></section>
+<div id="pin"><div class="wrap"><section class="brand"><img src="icon-512.png?v=25b02e0" alt="Инвестор"><div class="word">ИНВЕСТОР</div><div class="rule"></div><div class="tag">ЛИЧНЫЙ КАБИНЕТ</div></section>
 <section class="card"><div class="msg" id="pinm" aria-live="polite">Введите PIN</div><div class="dots" id="pind"><i></i><i></i><i></i><i></i></div>
 <div class="kp" id="kp"><button>1</button><button>2</button><button>3</button><button>4</button><button>5</button><button>6</button><button>7</button><button>8</button><button>9</button><button class="x" data-k="key" aria-label="Войти по ключу GitHub"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l2 2M15 8l2 2"/></svg>КЛЮЧ</button><button>0</button><button class="x" data-k="del" aria-label="Стереть"><svg viewBox="0 0 24 24"><path d="M9 5h11v14H9l-6-7z"/><path d="M12.5 9.5l5 5M17.5 9.5l-5 5"/></svg></button></div>
 <form class="keyf" id="keyf"><input id="keyi" type="password" autocomplete="off" placeholder="Ключ GitHub (github_pat_…)"><button class="btn" type="submit">Войти по ключу</button><button class="back" type="button" id="keyb">← Назад к PIN</button></form>
 <div class="foot">Инвестор · данные защищены</div></section></div></div>
 
-<aside class="sb"><div class="logo"><img src="icon-192.png?v=a6e50c5" alt="">Инвестор</div><div id="snav"></div><div class="sbf" id="sbf"></div></aside>
+<aside class="sb"><div class="logo"><img src="icon-192.png?v=25b02e0" alt="">Инвестор</div><div id="snav"></div><div class="sbf" id="sbf"></div></aside>
 <main>
-<div class="mlogo"><img src="icon-192.png?v=a6e50c5" alt="">Инвестор</div>
+<div class="mlogo"><img src="icon-192.png?v=25b02e0" alt="">Инвестор</div>
 <section class="v" id="v-home"><div class="top"><div><h1>Главная</h1><div class="sub" id="hello"></div></div><span class="badge off" id="bd-home"></span></div>
  <div class="tiles" id="h-tiles"></div>
  <div class="grid cols" style="grid-template-columns:2fr 1fr">
@@ -205,7 +205,7 @@ function normA(r){if(!r||typeof r!=='object')return null;const o={...r},m={...(r
  const ideas=Array.isArray(r.ideas)?r.ideas:[];
  if(!Array.isArray(r.consensus))o.consensus=ideas.filter(i=>i.analyst_targets?.length).map(i=>({ticker:i.ticker,target:i.analyst_target_avg,price:i.price,n:i.analyst_targets.length,source:'среднее по '+i.analyst_targets.map(a=>a.broker).join(', ')}));
  if(!Array.isArray(r.reviews)){o.reviews=ideas.flatMap(i=>(i.analyst_targets||[]).map(a=>({ticker:i.ticker,source:a.broker,target:a.target,url:a.source||a.url,rating:a.rating||null,quote:a.quote||null,date:a.date||null})));for(const w of r.watchlist||[])o.reviews.push({ticker:w.ticker,source:w.source_name||null,note:w.note,url:w.source,rating:w.rating||null,quote:w.quote||null,date:w.date||null})}
- o.ideas=ideas.map(i=>({...i,type:i.type||i.idea,side:i.side||(i.target!=null&&i.price!=null&&i.target<i.price?'sell':'buy'),entry:i.entry??(Array.isArray(i.entry_zone)?(i.entry_zone[0]+i.entry_zone[1])/2:i.price),entryTxt:Array.isArray(i.entry_zone)?i.entry_zone.map(x=>nf(x,x<100?2:0)).join('–'):null,
+ o.ideas=ideas.map(i=>({...i,type:i.type||i.idea,side:(i.direction==='short'?'sell':i.direction==='long'?'buy':null)||i.side||(i.target!=null&&i.price!=null&&i.target<i.price?'sell':'buy'),entry:i.entry??(Array.isArray(i.entry_zone)?(i.entry_zone[0]+i.entry_zone[1])/2:i.price),entryTxt:Array.isArray(i.entry_zone)?i.entry_zone.map(x=>nf(x,x<100?2:0)).join('–'):null,
   potential:i.upside_pct,source:i.source||(i.analyst_targets?.length?'цели: '+i.analyst_targets.map(a=>a.broker+' '+nf(a.target,0)+' ₽').join(', '):null),url:i.url||i.analyst_targets?.[0]?.source}));
  if(!Array.isArray(r.dividends))o.dividends=stocks.flatMap(s=>(s.upcoming_dividends||[]).map(d=>({ticker:s.ticker,date:d.record_date,amount:d.amount,yield:d.yield_pct,status:d.period,source:'smart-lab.ru'})));
  if(!r.forecasts){o.forecasts={};for(const i of ideas){const c=i.corridor_1sigma?.['3m'];if(c)o.forecasts[i.ticker]={low:c[0],high:c[1],base:i.target,horizon:'3 мес.',source:'коридор ±1σ (расчёт Финансиста), пунктир — цель идеи'}}}
@@ -474,7 +474,7 @@ function oCalc(){const b=bonds().find(x=>x.secid===OSEL),pp=N(String($('oc-p')?.
  <div style="font-size:13px;margin:4px 0 10px"><b class="au">${P(r.simpleAnnualPct)}</b> простых годовых${OST.reinvest?` · <b class="au">${P(r.annualPct)}</b> эффективных годовых`:''} · всего ${P(r.netPct)}</div>
  ${r.ytmPct!=null?kv('Доходность к погашению до налога',P(r.ytmPct)):''}${!OST.reinvest?kv('Простая доходность до налога',P(r.simpleYtmPct)):''}
  ${kv('Количество облигаций',nf(r.qtyStart,0)+(r.qtyEnd!==r.qtyStart?' → '+nf(r.qtyEnd,0):'')+' шт.')}${kv('Цена 1 шт. (чистая + НКД)',OFZ.rub(r.unitCost-r.nkdPerBond,2)+' + '+nf(r.nkdPerBond,2)+' ₽')}${kv('НКД уплачен при покупке',R(r.nkdPaid))}
- ${kv('Вложено / остаток',R(r.invested)+' / '+R(r.leftover))}${kv(`Купоны за период (${r.flows.length})`,R(r.couponsGross),'au')}${kv(OST.mode==='sell'?'Продажа (с НКД)':'Погашение номинала',R(r.proceeds))}
+ ${kv('Вложено / остаток',R(r.invested)+' / '+R(r.leftover))}${kv(`Купоны за период (${r.flows.length})`,R(r.couponsGross),'au')}${kv(OST.mode==='sell'?'Выручка от продажи (с НКД)':'Погашение номинала',R(r.proceeds))}
  ${kv('НДФЛ с купонов (13/15%)',r.couponTax?'−'+R(r.couponTax).replace('−',''):R(0),'r')}${kv('НДФЛ с разницы цен',r.priceTax?'−'+R(r.priceTax):R(0),'r')}${r.ldvApplies?kv('Льгота ст. 219.1 НК',R(r.ldvExempt),'g'):''}${kv('Итого на счёте',R(r.finalValue))}
  ${b._est||b.type==='ПК'?'<div class="warn" style="margin-top:8px">Оценка: будущие купоны неизвестны, взят последний известный купон.</div>':''}${b._amort?'<div class="warn" style="margin-top:8px">У выпуска амортизация номинала — в расчёте не учтена, результат приблизительный.</div>':''}
  <details style="margin-top:10px"><summary class="m" style="font-size:12px;cursor:pointer">Купонные выплаты (${r.flows.length})</summary>${r.flows.map(f=>`<div class="kv"><span class="num">${new Date(f.date).toLocaleDateString('ru-RU')} · ${nf(f.qty,0)} шт. × ${nf(f.perBond,2)}</span><b>${R(f.gross)} → ${R(f.net)}</b></div>`).join('')}</details>`}

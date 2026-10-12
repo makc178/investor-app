@@ -1,0 +1,256 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0B1426"><meta name="robots" content="noindex,nofollow">
+<title>Инвестор</title><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=36a890c"><link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png?v=36a890c"><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=36a890c"><link rel="manifest" href="manifest.webmanifest?v=36a890c">
+<meta name="apple-mobile-web-app-title" content="Инвестор"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<style>
+:root{--bg:#0A0F1C;--pan:#111827;--line:#1F2937;--ink:#E5E7EB;--mut:#94A3B8;--dim:#64748B;--au:#D4AF5A;--au2:#F3D98B;--g:#22C55E;--r:#EF4444;--gr:#64748B}
+*{box-sizing:border-box;margin:0;padding:0}html{background:var(--bg)}body{background:var(--bg);color:var(--ink);font:14px/1.45 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh}
+button{font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.sb{position:fixed;left:0;top:0;bottom:0;width:208px;border-right:1px solid var(--line);padding:20px 14px;display:flex;flex-direction:column;gap:4px;background:var(--bg);z-index:5}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;margin-bottom:22px;letter-spacing:.3px}.logo img{width:30px;height:30px}
+.nav{padding:9px 12px;border-radius:10px;color:var(--mut);display:flex;gap:10px;align-items:center;background:none;border:1px solid transparent;text-align:left;width:100%}
+.nav:hover{color:var(--ink)}.nav.a{background:var(--pan);color:var(--au);border-color:var(--line)}.nav svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.sbf{margin-top:auto;font-size:11px;color:var(--mut);line-height:1.5}
+main{margin-left:208px;padding:18px 22px 22px;max-width:1500px}
+.top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px}h1{font-size:21px;font-weight:600}.sub{color:var(--mut);margin-top:3px;font-size:13px}
+.badge{font-size:11px;color:var(--au);border:1px solid #5b4a22;background:#1a1608;padding:3px 10px;border-radius:20px;white-space:nowrap}.badge.off{color:var(--mut);border-color:var(--line);background:var(--pan)}
+.p{background:var(--pan);border:1px solid var(--line);border-radius:14px;padding:14px;min-width:0}
+.t{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.6px;margin-bottom:10px;font-weight:600}
+.g{color:var(--g)}.r{color:var(--r)}.au{color:var(--au)}.m{color:var(--mut)}.num{font-variant-numeric:tabular-nums}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid #1a2333}.row:last-child{border:0}.tk{font-weight:600}
+a.tk,.lnk{color:inherit;text-decoration:none;cursor:pointer}a.tk:hover,.lnk:hover{color:var(--au)}
+.grid{display:grid;gap:14px}.big{font-size:28px;font-weight:700}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:14px}.tile .l{font-size:12px;color:var(--mut)}.tile .v{font-size:20px;font-weight:600;margin:2px 0}.tile .c{font-size:12px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.chip{padding:6px 13px;border:1px solid var(--line);border-radius:20px;color:var(--mut);background:var(--pan)}.chip.a{color:#0A0F1C;background:var(--au);border-color:var(--au);font-weight:600}
+.empty{color:var(--mut);text-align:center;padding:26px 10px;font-size:13px;line-height:1.5}.empty b{display:block;color:var(--ink);font-weight:500;margin-bottom:4px}
+.disc{font-size:11px;color:var(--dim);text-align:center;margin:18px auto 0;max-width:980px;line-height:1.5}
+.v{display:none}.v.on{display:block;animation:vin .2s ease}@keyframes vin{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+.heat{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.heat div{border-radius:9px;padding:9px;min-height:74px;display:flex;flex-direction:column;justify-content:space-between;font-size:12px}.heat b{font-size:15px}
+.cbar{display:flex;height:7px;border-radius:4px;overflow:hidden;background:#1a2333;flex:1}.cbar i{display:block}
+.idea{display:flex;flex-direction:column;gap:10px}.idea .h{display:flex;justify-content:space-between;align-items:center;gap:8px}.side{font-size:11px;font-weight:600;padding:2px 9px;border-radius:20px;border:1px solid}
+.side.b{color:var(--g);border-color:#14532d;background:#0b2416}.side.s{color:var(--r);border-color:#7f1d1d;background:#2a0f0f}.side.n{color:var(--mut);border-color:var(--line)}
+.lv{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;font-size:12px}.lv span{display:block;color:var(--mut)}
+.conf{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--mut);margin-top:auto}.conf .cbar i{background:var(--au)}
+.src{font-size:11.5px;color:var(--dim)}.src a{color:var(--au)}
+.srch{display:flex;gap:8px;margin-bottom:14px}.srch input{flex:1;max-width:320px;background:var(--pan);border:1px solid var(--line);border-radius:10px;padding:9px 12px;color:var(--ink);font:inherit;text-transform:uppercase}.srch input:focus{outline:0;border-color:var(--au)}
+.btn{background:var(--au);color:#0A0F1C;border:0;border-radius:10px;padding:9px 16px;font-weight:600}
+.leg{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--mut)}.leg i{display:inline-block;width:10px;height:2px;vertical-align:middle;margin-right:5px}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}.tbl th{text-align:left;color:var(--mut);font-weight:500;font-size:12px;padding:6px 8px;border-bottom:1px solid var(--line)}.tbl td{padding:8px;border-bottom:1px solid #1a2333}.tbl .n{text-align:right}
+.txt{font-size:13.5px;line-height:1.6;color:#CBD5E1;white-space:pre-line}
+.sk{color:var(--dim);font-size:12px;padding:20px 0;text-align:center}
+#tabs{display:none}
+/* mobile */
+@media(max-width:900px){.sb{display:none}main{margin-left:0;padding:14px 14px calc(84px + env(safe-area-inset-bottom));padding-top:max(14px,env(safe-area-inset-top))}
+ #tabs{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:0;right:0;bottom:0;z-index:6;background:rgba(10,15,28,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+ #tabs button{background:none;border:0;color:var(--mut);font-size:10px;padding:8px 2px 7px;display:flex;flex-direction:column;align-items:center;gap:3px;min-height:58px}#tabs button.a{color:var(--au)}#tabs svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+ .mlogo{display:flex!important}.cols{grid-template-columns:1fr!important}.big{font-size:24px}h1{font-size:19px}.lv{grid-template-columns:repeat(2,1fr)}.tiles{grid-template-columns:repeat(2,1fr)}}
+.mlogo{display:none;align-items:center;gap:8px;font-weight:700;margin-bottom:12px}.mlogo img{width:26px;height:26px}
+/* PIN */
+#pin{position:fixed;inset:0;z-index:50;color:#E8EDF5;background:radial-gradient(ellipse at 50% 35%,#132242 0%,#0B1426 70%);display:none;align-items:center;justify-content:center;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+#pin .wrap{display:flex;align-items:center;justify-content:center;gap:9vw;padding:24px;width:100%;height:100%}
+#pin .brand{display:flex;flex-direction:column;align-items:center;text-align:center}#pin .brand img{width:150px;height:150px;filter:drop-shadow(0 10px 30px rgba(0,0,0,.4));animation:plin .8s cubic-bezier(.2,.8,.2,1) both}
+#pin .word{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:42px;letter-spacing:.28em;margin:18px 0 0 .28em;color:#F1F4FA}
+#pin .rule{width:120px;height:1px;margin:14px auto;background:linear-gradient(90deg,transparent,#D4AF5A,transparent)}#pin .tag{font-size:12px;letter-spacing:.4em;margin-left:.4em;color:#D4AF5A}
+#pin .card{width:360px;padding:40px 36px 30px;border-radius:28px;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(212,175,90,.18);box-shadow:0 30px 80px rgba(0,0,0,.45);backdrop-filter:blur(14px);display:flex;flex-direction:column;align-items:center}
+#pin .msg{min-height:18px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:rgba(232,237,245,.55);font-weight:300;text-align:center}#pin.bad .msg{color:#E88A8A}
+#pin .dots{display:flex;gap:20px;margin:22px 0 34px}#pin .dots i{width:13px;height:13px;border-radius:50%;border:1px solid #D4AF5A;transition:all .18s}#pin .dots i.f{background:linear-gradient(135deg,#F3D98B,#D4AF5A 55%,#A8812F);box-shadow:0 0 12px rgba(212,175,90,.55)}#pin .dots.shake i{border-color:#E06666}
+#pin .kp{display:grid;grid-template-columns:repeat(3,76px);gap:18px 26px}
+#pin .kp button{width:76px;height:76px;border-radius:50%;background:rgba(255,255,255,.05);border:1px solid rgba(212,175,90,.25);color:#EEF2F8;font:200 30px Inter,sans-serif;display:flex;align-items:center;justify-content:center;transition:all .18s;user-select:none}
+#pin .kp button:hover{border-color:rgba(212,175,90,.6);color:#F3D98B}#pin .kp button:active,#pin .kp button.press{background:rgba(212,175,90,.16);transform:scale(.96)}
+#pin .kp button.x{background:transparent;border-color:transparent;flex-direction:column;gap:4px;font-size:10px;letter-spacing:.14em;color:rgba(212,175,90,.85)}
+#pin .kp svg{width:24px;height:24px;stroke:#D4AF5A;fill:none;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+#pin .foot{margin-top:16px;font-size:11px;letter-spacing:.08em;color:rgba(232,237,245,.4)}
+#pin .keyf{display:none;width:100%;flex-direction:column;gap:10px;margin-top:6px}#pin.key .keyf{display:flex}#pin.key .dots,#pin.key .kp{display:none}
+#pin .keyf input{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:11px;color:#E8EDF5;font:inherit}#pin .keyf input:focus{outline:0;border-color:#D4AF5A}
+#pin .keyf .back{background:none;border:0;color:rgba(212,175,90,.85);font-size:12px}
+#pin.ok{animation:pout .5s ease .05s forwards}#pin.ok .dots i{background:#6FCF97;border-color:#6FCF97}@keyframes pout{to{opacity:0;transform:scale(1.03)}}
+.shake{animation:sh .4s}@keyframes sh{20%,60%{transform:translateX(-10px)}40%,80%{transform:translateX(10px)}}@keyframes plin{from{opacity:0;transform:translateY(18px) scale(.94)}to{opacity:1;transform:none}}
+@media(max-width:760px){#pin .wrap{flex-direction:column;gap:0;justify-content:space-between;padding:52px 20px 26px}#pin .brand img{width:96px;height:96px}#pin .word{font-size:32px;margin-top:12px}#pin .card{width:100%;max-width:360px;background:none;border:0;box-shadow:none;backdrop-filter:none;padding:0}#pin .dots{margin:16px 0 26px}}
+@media(max-width:760px) and (max-height:700px){#pin .kp{grid-template-columns:repeat(3,64px);gap:12px 24px}#pin .kp button{width:64px;height:64px;font-size:26px}#pin .wrap{padding-top:24px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body>
+<div id="pin"><div class="wrap"><section class="brand"><img src="icon-512.png?v=36a890c" alt="Инвестор"><div class="word">ИНВЕСТОР</div><div class="rule"></div><div class="tag">ЛИЧНЫЙ КАБИНЕТ</div></section>
+<section class="card"><div class="msg" id="pinm" aria-live="polite">Введите PIN</div><div class="dots" id="pind"><i></i><i></i><i></i><i></i></div>
+<div class="kp" id="kp"><button>1</button><button>2</button><button>3</button><button>4</button><button>5</button><button>6</button><button>7</button><button>8</button><button>9</button><button class="x" data-k="key" aria-label="Войти по ключу GitHub"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l2 2M15 8l2 2"/></svg>КЛЮЧ</button><button>0</button><button class="x" data-k="del" aria-label="Стереть"><svg viewBox="0 0 24 24"><path d="M9 5h11v14H9l-6-7z"/><path d="M12.5 9.5l5 5M17.5 9.5l-5 5"/></svg></button></div>
+<form class="keyf" id="keyf"><input id="keyi" type="password" autocomplete="off" placeholder="Ключ GitHub (github_pat_…)"><button class="btn" type="submit">Войти по ключу</button><button class="back" type="button" id="keyb">← Назад к PIN</button></form>
+<div class="foot">Инвестор · данные защищены</div></section></div></div>
+
+<aside class="sb"><div class="logo"><img src="icon-192.png?v=36a890c" alt="">Инвестор</div><div id="snav"></div><div class="sbf" id="sbf"></div></aside>
+<main>
+<div class="mlogo"><img src="icon-192.png?v=36a890c" alt="">Инвестор</div>
+<section class="v" id="v-home"><div class="top"><div><h1>Главная</h1><div class="sub" id="hello"></div></div><span class="badge off" id="bd-home"></span></div>
+ <div class="tiles" id="h-tiles"></div>
+ <div class="grid cols" style="grid-template-columns:2fr 1fr">
+  <div class="p"><div class="t">Индекс Мосбиржи · 6 мес.</div><div id="h-chart"><div class="sk">Загрузка…</div></div></div>
+  <div class="p"><div class="t">Ближайшие отсечки</div><div id="h-cuts"></div></div>
+  <div class="p"><div class="t">Портфель</div><div class="empty"><b>Портфель не подключён</b>Данных о ваших позициях в приложении пока нет.</div></div>
+  <div class="p"><div class="t">Самые торгуемые акции сегодня</div><div id="h-watch"><div class="sk">Загрузка…</div></div></div>
+ </div></section>
+
+<section class="v" id="v-market"><div class="top"><div><h1>Обзор рынка</h1><div class="sub">Мосбиржа · основная сессия</div></div><span class="badge off" id="bd-market"></span></div>
+ <div class="tiles" id="m-tiles"></div>
+ <div class="grid cols" style="grid-template-columns:1fr 1fr 1fr">
+  <div class="grid" style="align-content:start"><div class="p"><div class="t">Индекс Мосбиржи · 6 мес.</div><div id="m-chart"><div class="sk">Загрузка…</div></div></div>
+   <div class="p"><div class="grid" style="grid-template-columns:1fr 1fr;gap:16px"><div><div class="t">Лидеры роста</div><div id="m-up"></div></div><div><div class="t">Лидеры падения</div><div id="m-dn"></div></div></div><div class="src" style="margin-top:8px">Среди 100 самых ликвидных акций TQBR</div></div></div>
+  <div class="p"><div class="t">Тепловая карта секторов</div><div id="m-heat"></div></div>
+  <div class="grid" style="align-content:start"><div class="p"><div class="t">Мнения аналитиков</div><div id="m-cons"></div></div><div class="p"><div class="t">Последние обзоры</div><div id="m-rev"></div></div></div>
+ </div>
+ <div class="p" style="margin-top:14px"><div class="t">Обзор Финансиста</div><div id="m-sum"></div></div>
+ <div class="disc">Материалы носят информационно-аналитический характер, не являются индивидуальной инвестиционной рекомендацией и офертой. Мнения аналитиков приведены со ссылкой на источник. Прогнозы не гарантируют доходности; решения об инвестициях принимаются самостоятельно, с учётом рисков потери средств.</div></section>
+
+<section class="v" id="v-ideas"><div class="top"><div><h1>Торговые идеи</h1><div class="sub" id="i-sub"></div></div><span class="badge off" id="bd-ideas"></span></div>
+ <div class="chips" id="i-chips"></div><div class="grid" id="i-list" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr))"></div>
+ <div class="disc">Материалы носят информационно-аналитический характер, не являются индивидуальной инвестиционной рекомендацией и офертой. Мнения аналитиков приведены со ссылкой на источник. Прогнозы не гарантируют доходности; решения об инвестициях принимаются самостоятельно, с учётом рисков потери средств.</div></section>
+
+<section class="v" id="v-divs"><div class="top"><div><h1>Дивиденды</h1><div class="sub">Календарь отсечек от Финансиста</div></div><span class="badge off" id="bd-divs"></span></div>
+ <div class="p" id="d-list"></div><div class="disc">Материалы носят информационно-аналитический характер, не являются индивидуальной инвестиционной рекомендацией и офертой. Мнения аналитиков приведены со ссылкой на источник. Прогнозы не гарантируют доходности; решения об инвестициях принимаются самостоятельно, с учётом рисков потери средств.</div></section>
+
+<section class="v" id="v-sec"><div class="top"><div><h1 id="s-h">Бумага</h1><div class="sub" id="s-sub">TQBR · дневные свечи</div></div><span class="badge off" id="bd-sec"></span></div>
+ <form class="srch" id="s-form"><input id="s-in" placeholder="Тикер, напр. SBER" maxlength="12" autocomplete="off"><button class="btn">Открыть</button></form>
+ <div class="grid cols" style="grid-template-columns:2fr 1fr">
+  <div class="p"><div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px"><div><span class="big num" id="s-px">—</span> <span id="s-ch" class="num"></span></div><div class="leg"><span><i style="background:#60A5FA"></i>MA20</span><span><i style="background:var(--au)"></i>MA50</span><span><i style="background:var(--g)"></i>Мин. 60 дн.</span><span><i style="background:var(--r)"></i>Макс. 60 дн.</span><span id="s-legf" style="display:none"><i style="background:#94A3B8"></i>Прогноз</span></div></div>
+   <div id="s-chart" style="margin-top:10px"><div class="sk">Загрузка…</div></div><div class="leg" id="s-stats" style="margin-top:8px;color:var(--mut)"></div></div>
+  <div class="grid" style="align-content:start"><div class="p"><div class="t">Дивиденды на акцию, ₽ · Мосбиржа</div><div id="s-div"></div></div>
+   <div class="p"><div class="t">Консенсус аналитиков</div><div id="s-cons"></div></div><div class="p"><div class="t">Идеи и прогнозы</div><div id="s-ideas"></div></div></div>
+ </div><div class="disc">Материалы носят информационно-аналитический характер, не являются индивидуальной инвестиционной рекомендацией и офертой. Мнения аналитиков приведены со ссылкой на источник. Прогнозы не гарантируют доходности; решения об инвестициях принимаются самостоятельно, с учётом рисков потери средств.</div></section>
+</main>
+<nav id="tabs"></nav>
+<script>
+"use strict";
+const REPO='makc178/investor-data',BRANCH='main',PINBLOB={"v": 1, "bv": 1791805800, "kind": "write", "kdf": "PBKDF2-SHA256", "iterations": 600000, "salt": "n4IpekB0ABUps1IgRJ4KyQ==", "iv": "lsvG/NbAWJNMTqC5", "ct": "2V3d94PWP7JTMFne5RgmpDIf05bfFbpXwnWHUvMT94RUr0rZCGKPBCLcS41l+9ipcJ6zungUKB9K6kQWZUh79XFsnIiCZgzIwIqQPiRLs/HBMv78ZMchk797GAGCt6zSmzalv+KFDIxlNastiHy3O2QTWPM="},PFX='claims:',ISS='https://iss.moex.com/iss';
+const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const ls={g:k=>{try{return localStorage.getItem(k)}catch(e){return null}},s:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}},d:k=>{try{localStorage.removeItem(k)}catch(e){}}};
+let TOKEN='',A=null,AERR='',MKT={};
+const EMPTY='<div class="empty"><b>Данные появятся после обновления Финансистом</b>Финансист обновляет обзор каждый будний день в 8:51 МСК.</div>';
+const LOCKED='<div class="empty"><b>Нужен вход по PIN или ключу</b>Аналитика Финансиста хранится в закрытом зашифрованном хранилище.</div>';
+const noA=()=>!TOKEN?LOCKED:(AERR?`<div class="empty"><b>Не удалось загрузить аналитику</b>${esc(AERR)}</div>`:EMPTY);
+const nf=(x,d=2)=>x==null||isNaN(x)?'—':Number(x).toLocaleString('ru-RU',{minimumFractionDigits:d,maximumFractionDigits:d});
+const pct=x=>x==null||isNaN(x)?'<span class="m">—</span>':`<span class="${x>=0?'g':'r'}">${x>0?'+':''}${nf(x)}%</span>`;
+const N=x=>x==null||x===''?null:+String(x).replace(/\s/g,'').replace(',','.');
+const tkl=t=>`<a class="tk" href="#sec/${encodeURIComponent(t)}">${esc(t)}</a>`;
+const fdate=s=>{if(!s)return'';const d=new Date(s);return isNaN(d)?esc(s):d.toLocaleDateString('ru-RU',{day:'2-digit',month:'short'}).replace('.','')};
+// ---------- графики ----------
+let GID=0;
+function line(vals,w,h,col,fill=true,sw=2){if(!vals||vals.length<2)return'';const mn=Math.min(...vals),mx=Math.max(...vals),sc=v=>h-4-(v-mn)/(mx-mn||1)*(h-8);
+ const pts=vals.map((v,i)=>`${(i*w/(vals.length-1)).toFixed(1)},${sc(v).toFixed(1)}`).join(' '),id='g'+(GID++);
+ return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" style="display:block;width:100%;height:${h}px">${fill?`<defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${col}" stop-opacity=".28"/><stop offset="1" stop-color="${col}" stop-opacity="0"/></linearGradient></defs><polygon points="0,${h} ${pts} ${w},${h}" fill="url(#${id})"/>`:''}<polyline points="${pts}" fill="none" stroke="${col}" stroke-width="${sw}" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></svg>`}
+const ma=(a,n)=>a.map((_,i)=>i<n-1?null:a.slice(i-n+1,i+1).reduce((s,x)=>s+x,0)/n);
+function candles(C,fc){const W=760,H=330,n=C.length,ext=fc?Math.round(n*.22):0,lo=Math.min(...C.map(c=>c.l),...(fc?[fc.low]:[]).filter(x=>x!=null)),hi=Math.max(...C.map(c=>c.h),...(fc?[fc.high]:[]).filter(x=>x!=null));
+ const pad=(hi-lo)*.06,y=v=>H-18-(v-lo+pad)/(hi-lo+2*pad)*(H-28),bw=(W-50)/(n+ext),x=i=>i*bw+bw/2;let s='';
+ for(let k=0;k<=4;k++){const v=lo+(hi-lo)*k/4;s+=`<line x1="0" x2="${W-50}" y1="${y(v)}" y2="${y(v)}" stroke="#1a2333"/><text x="${W-46}" y="${y(v)+4}" fill="#64748B" font-size="10">${nf(v,v<10?2:0)}</text>`}
+ C.forEach((c,i)=>{const up=c.c>=c.o,col=up?'#22C55E':'#EF4444';s+=`<line x1="${x(i)}" x2="${x(i)}" y1="${y(c.h)}" y2="${y(c.l)}" stroke="${col}"/><rect x="${x(i)-bw*.32}" y="${y(Math.max(c.o,c.c))}" width="${bw*.64}" height="${Math.max(1,Math.abs(y(c.o)-y(c.c)))}" fill="${col}"/>`});
+ const cl=C.map(c=>c.c),pl=(a,col)=>{const p=a.map((v,i)=>v==null?null:`${x(i).toFixed(1)},${y(v).toFixed(1)}`).filter(Boolean).join(' ');return p?`<polyline points="${p}" fill="none" stroke="${col}" stroke-width="1.6"/>`:''};
+ s+=pl(ma(cl,20),'#60A5FA')+pl(ma(cl,50),'#D4AF5A');const L=C.slice(-60),sup=Math.min(...L.map(c=>c.l)),res=Math.max(...L.map(c=>c.h));
+ s+=`<line x1="0" x2="${W-50}" y1="${y(sup)}" y2="${y(sup)}" stroke="#22C55E" stroke-dasharray="3 4" opacity=".7"/><line x1="0" x2="${W-50}" y1="${y(res)}" y2="${y(res)}" stroke="#EF4444" stroke-dasharray="3 4" opacity=".7"/>`;
+ if(fc){const x0=x(n-1),x1=x(n-1+ext),c0=cl[n-1];s+=`<line x1="${x0}" x2="${x0}" y1="0" y2="${H-18}" stroke="#334155" stroke-dasharray="2 3"/>`;
+  if(fc.low!=null&&fc.high!=null)s+=`<polygon points="${x0},${y(c0)} ${x1},${y(fc.high)} ${x1},${y(fc.low)}" fill="#94A3B8" opacity=".12"/>`;
+  if(fc.base!=null)s+=`<line x1="${x0}" y1="${y(c0)}" x2="${x1}" y2="${y(fc.base)}" stroke="#D4AF5A" stroke-dasharray="5 4"/>`;if(fc.label)s+=`<text x="${x0+4}" y="12" fill="#94A3B8" font-size="10">${esc(fc.label)}</text>`}
+ return {svg:`<svg viewBox="0 0 ${W} ${H}" style="display:block;width:100%;height:auto">${s}</svg>`,sup,res}}
+// ---------- Мосбиржа (публичные данные) ----------
+const iss=async(p)=>{const r=await fetch(ISS+p+(p.includes('?')?'&':'?')+'iss.meta=off',{cache:'no-store'});if(!r.ok)throw new Error('ISS '+r.status);return r.json()};
+const tab=(j,k)=>(j[k]?.data||[]).map(r=>Object.fromEntries(j[k].columns.map((c,i)=>[c,r[i]])));
+const ago=d=>{const t=new Date(Date.now()-d*864e5);return t.toISOString().slice(0,10)};
+async function loadMkt(){
+ const [ix,fx,sh,ch]=await Promise.allSettled([iss('/engines/stock/markets/index/boards/SNDX/securities.json?securities=IMOEX,RGBI&iss.only=marketdata&marketdata.columns=SECID,CURRENTVALUE,LASTCHANGEPRC,UPDATETIME'),
+  iss('/engines/currency/markets/selt/boards/CETS/securities.json?securities=USD000UTSTOM,CNYRUB_TOM&iss.only=marketdata&marketdata.columns=SECID,LAST,LASTTOPREVPRICE'),
+  iss('/engines/stock/markets/shares/boards/TQBR/securities.json?securities.columns=SECID,SHORTNAME,PREVPRICE&marketdata.columns=SECID,LAST,LASTTOPREVPRICE,VALTODAY,UPDATETIME'),
+  iss(`/engines/stock/markets/index/securities/IMOEX/candles.json?interval=24&from=${ago(183)}&candles.columns=begin,close`)]);
+ if(ix.status==='fulfilled')for(const r of tab(ix.value,'marketdata'))MKT[r.SECID]={v:r.CURRENTVALUE,c:r.LASTCHANGEPRC,t:r.UPDATETIME};
+ if(fx.status==='fulfilled')for(const r of tab(fx.value,'marketdata'))MKT[r.SECID]={v:r.LAST,c:r.LASTTOPREVPRICE};
+ if(sh.status==='fulfilled'){const sec=Object.fromEntries(tab(sh.value,'securities').map(r=>[r.SECID,r]));MKT.shares=tab(sh.value,'marketdata').map(r=>({id:r.SECID,name:sec[r.SECID]?.SHORTNAME,px:r.LAST||sec[r.SECID]?.PREVPRICE,ch:r.LASTTOPREVPRICE,val:r.VALTODAY||0,t:r.UPDATETIME})).filter(r=>r.px);MKT.names=Object.fromEntries(MKT.shares.map(r=>[r.id,r.name]))}
+ if(ch.status==='fulfilled')MKT.imoex=tab(ch.value,'candles').map(r=>r.close);
+ MKT.at=new Date();MKT.ok=ix.status==='fulfilled'||sh.status==='fulfilled';renderAll()}
+const candC={};async function cand(t,days){const k=t+days;if(candC[k])return candC[k];let out=[],st=0;
+ for(let i=0;i<6;i++){const j=await iss(`/engines/stock/markets/shares/boards/TQBR/securities/${encodeURIComponent(t)}/candles.json?interval=24&from=${ago(days)}&start=${st}&candles.columns=begin,open,close,high,low,value`);const r=tab(j,'candles');out=out.concat(r);if(r.length<500)break;st+=500}
+ return candC[k]=out.map(r=>({d:r.begin,o:r.open,c:r.close,h:r.high,l:r.low,v:r.value}))}
+// ---------- закрытые данные (зашифрованы) ----------
+const b64=x=>Uint8Array.from(atob(x),c=>c.charCodeAt(0));
+const ghRaw=async p=>{const r=await fetch(`https://api.github.com/repos/${REPO}/contents/${p}?ref=${BRANCH}&_=${Date.now()}`,{headers:{Authorization:'Bearer '+TOKEN,Accept:'application/vnd.github.raw+json','X-GitHub-Api-Version':'2022-11-28'},cache:'no-store'});
+ if(r.status===404)return null;if(r.status===401||r.status===403)throw new Error('ключ не даёт доступа к закрытому хранилищу «'+REPO+'»');if(!r.ok)throw new Error('GitHub '+r.status);return r.json()};
+async function loadA(){if(!TOKEN)return;AERR='';try{const [k,e]=await Promise.all([ghRaw('key.json'),ghRaw('analysis.enc.json')]);if(!k||!e){A=null}else{
+  const key=await crypto.subtle.importKey('raw',b64(k.k),'AES-GCM',false,['decrypt']);A=JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(e.iv)},key,b64(e.ct))))}}catch(x){A=null;AERR=x.message||String(x)}renderAll()}
+const AL=k=>Array.isArray(A?.[k])?A[k]:[];
+// ---------- отрисовка ----------
+const tile=(l,v,c,sub)=>`<div class="p tile"><div class="l">${l}</div><div class="v num">${v}</div><div class="c">${c??''}${sub?` <span class="m">${esc(sub)}</span>`:''}</div></div>`;
+function tilesHTML(full){const m=MKT,ind=Array.isArray(A?.market?.indicators)?A.market.indicators:[];let s='';
+ s+=tile('IMOEX',m.IMOEX?nf(m.IMOEX.v):'—',m.IMOEX?pct(m.IMOEX.c):'')+tile('RGBI',m.RGBI?nf(m.RGBI.v):'—',m.RGBI?pct(m.RGBI.c):'')+tile('USD/RUB',m.USD000UTSTOM?nf(m.USD000UTSTOM.v)+' ₽':'—',m.USD000UTSTOM?pct(m.USD000UTSTOM.c):'')+tile('CNY/RUB',m.CNYRUB_TOM?nf(m.CNYRUB_TOM.v,3)+' ₽':'—',m.CNYRUB_TOM?pct(m.CNYRUB_TOM.c):'');
+ if(full)for(const i of ind.slice(0,4))s+=tile(esc(i.name),esc(i.value),i.change!=null&&i.change!==''?pct(N(i.change)):'',i.note);return s}
+const chartIMOEX=()=>MKT.imoex?.length>1?line(MKT.imoex,700,170,MKT.imoex.at(-1)>=MKT.imoex[0]?'#22C55E':'#EF4444')+`<div class="src" style="margin-top:6px">${nf(MKT.imoex[0])} → ${nf(MKT.imoex.at(-1))} · ${pct((MKT.imoex.at(-1)/MKT.imoex[0]-1)*100)}</div>`:(MKT.at?'<div class="empty">Мосбиржа не ответила, попробуйте обновить страницу.</div>':'<div class="sk">Загрузка…</div>');
+const srcLine=()=>`Данные: API Мосбиржи${MKT.at?'<br>'+MKT.at.toLocaleString('ru-RU',{timeZone:'Europe/Moscow',day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'})+' МСК':''}${A?.updated_at?'<br>Финансист: '+esc(new Date(A.updated_at).toLocaleString('ru-RU',{timeZone:'Europe/Moscow',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}))+' МСК':''}`;
+function badges(){const t=A?.updated_at?'Аналитика от '+new Date(A.updated_at).toLocaleDateString('ru-RU',{day:'2-digit',month:'2-digit'}):(TOKEN?'Аналитики ещё нет':'Аналитика закрыта');for(const v of['home','market','ideas','divs','sec'])$('bd-'+v).textContent=v==='sec'||v==='home'?(MKT.at?'Мосбиржа · онлайн':'…'):t}
+function renderHome(){const h=new Date().toLocaleString('ru-RU',{timeZone:'Europe/Moscow',hour:'numeric'});$('hello').textContent=(h<6?'Доброй ночи':h<12?'Доброе утро':h<18?'Добрый день':'Добрый вечер')+', Максим Юрьевич';
+ $('h-tiles').innerHTML=tilesHTML(false);$('h-chart').innerHTML=chartIMOEX();
+ const cuts=AL('dividends').filter(d=>!d.date||new Date(d.date)>=new Date(Date.now()-864e5)).sort((a,b)=>String(a.date).localeCompare(String(b.date))).slice(0,6);
+ $('h-cuts').innerHTML=cuts.length?cuts.map(d=>`<div class="row"><div>${tkl(d.ticker)} <span class="m">· ${fdate(d.date)}</span></div><div class="num"><span class="au">${d.amount!=null?nf(N(d.amount))+' ₽':'—'}</span>${d.yield!=null?` <span class="m">· ${nf(N(d.yield),1)}%</span>`:''}</div></div>`).join(''):noA();
+ const w=(MKT.shares||[]).slice().sort((a,b)=>b.val-a.val).slice(0,6);$('h-watch').innerHTML=w.length?w.map(r=>`<div class="row"><div>${tkl(r.id)}<div class="m" style="font-size:11px">${esc(r.name)}</div></div><div class="num" style="text-align:right"><div>${nf(r.px)} ₽</div><div style="font-size:11px">${pct(r.ch)}</div></div></div>`).join(''):'<div class="sk">Загрузка…</div>'}
+function consRow(c){const b=+c.buy||0,h=+c.hold||0,s=+c.sell||0,t=b+h+s||1,px=N(c.price)??MKT.shares?.find(x=>x.id===c.ticker)?.px,tg=N(c.target);
+ return `<div class="row"><span style="width:58px">${tkl(c.ticker)}</span><div class="cbar"><i style="width:${b/t*100}%;background:var(--g)"></i><i style="width:${h/t*100}%;background:var(--gr)"></i><i style="width:${s/t*100}%;background:var(--r)"></i></div><span class="num" style="min-width:110px;text-align:right">${tg!=null?nf(tg,tg<100?2:0)+' ₽':'—'} ${tg&&px?pct((tg/px-1)*100):''}</span></div>`}
+function renderMarket(){$('m-tiles').innerHTML=tilesHTML(true);$('m-chart').innerHTML=chartIMOEX();
+ const liq=(MKT.shares||[]).filter(r=>r.ch!=null).sort((a,b)=>b.val-a.val).slice(0,100),up=liq.slice().sort((a,b)=>b.ch-a.ch).slice(0,5),dn=liq.slice().sort((a,b)=>a.ch-b.ch).slice(0,5),rw=r=>`<div class="row">${tkl(r.id)}<span class="num">${pct(r.ch)}</span></div>`;
+ $('m-up').innerHTML=liq.length?up.map(rw).join(''):'<div class="sk">Загрузка…</div>';$('m-dn').innerHTML=liq.length?dn.map(rw).join(''):'';
+ const sec=Array.isArray(A?.market?.sectors)?A.market.sectors:[];$('m-heat').innerHTML=sec.length?`<div class="heat">${sec.map(s=>{const c=N(s.change)||0,a=Math.min(1,Math.abs(c)/2.5)*.55+.12;return `<div style="background:${c>=0?`rgba(34,197,94,${a})`:`rgba(239,68,68,${a})`}"><span>${esc(s.name)}</span><b class="num">${c>0?'+':''}${nf(c)}%</b></div>`}).join('')}</div>`:noA();
+ const cs=AL('consensus');$('m-cons').innerHTML=cs.length?`<div class="leg" style="margin-bottom:6px"><span><i style="background:var(--g);height:8px"></i>Покупать</span><span><i style="background:var(--gr);height:8px"></i>Держать</span><span><i style="background:var(--r);height:8px"></i>Продавать</span></div>`+cs.slice(0,8).map(consRow).join(''):noA();
+ const rv=AL('reviews');$('m-rev').innerHTML=rv.length?rv.slice(0,8).map(r=>`<div class="row"><div>${tkl(r.ticker)} <span class="m">· ${r.url?`<a class="lnk" href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.source)}</a>`:esc(r.source)}${r.date?' · '+fdate(r.date):''}</span></div><div class="num" style="white-space:nowrap"><span class="${/куп|buy/i.test(r.rating)?'g':/прод|sell/i.test(r.rating)?'r':'m'}">${esc(r.rating||'')}</span> ${r.target!=null?nf(N(r.target),0)+' ₽':''}</div></div>`).join(''):noA();
+ const sm=A?.market?.summary;$('m-sum').innerHTML=sm?`<div class="txt">${esc(sm)}</div>${A.market.sources?`<div class="src" style="margin-top:8px">Источники: ${esc([].concat(A.market.sources).join(', '))}</div>`:''}`:noA()}
+let IF='Все';const sideOf=s=>/sell|прод|short/i.test(s||'')?'s':/buy|пок|long/i.test(s||'')?'b':'n',sideT={b:'Покупка',s:'Продажа',n:'Наблюдение'};
+function ideaCard(i){const sd=sideOf(i.side),e=N(i.entry),tg=N(i.target),st=N(i.stop),pot=e&&tg?(tg/e-1)*100:null,cf=N(i.confidence),id='sp-'+esc(i.ticker)+'-'+(GID++);
+ return `<div class="p idea"><div class="h"><div>${tkl(i.ticker)} <span class="m" style="font-size:12px">· ${esc(i.type||'')}</span></div><span class="side ${sd}">${sideT[sd]}</span></div><div class="spark" data-t="${esc(i.ticker)}" data-s="${sd}" id="${id}" style="height:70px"></div>
+ <div class="lv num"><div><span>Вход</span>${nf(e)}</div><div><span>Цель</span>${nf(tg)}</div><div><span>Стоп</span>${nf(st)}</div><div><span>Потенциал</span>${pct(pot)}</div></div>
+ ${i.rationale?`<div style="font-size:13px;color:#CBD5E1">${esc(i.rationale)}</div>`:''}${i.source?`<div class="src">Источник: ${i.url?`<a href="${esc(i.url)}" target="_blank" rel="noopener">${esc(i.source)}</a>`:esc(i.source)}</div>`:''}
+ <div class="conf">${cf!=null?`Уверенность <div class="cbar"><i style="width:${Math.min(100,cf)}%"></i></div> <span class="num">${nf(cf,0)}%</span>`:''}${i.horizon?` <span>· ${esc(i.horizon)}</span>`:''}</div></div>`}
+async function fillSparks(root){for(const el of root.querySelectorAll('.spark')){try{const c=await cand(el.dataset.t,95);el.innerHTML=line(c.map(x=>x.c),300,70,el.dataset.s==='s'?'#EF4444':el.dataset.s==='b'?'#22C55E':'#94A3B8')}catch(e){}}}
+function renderIdeas(){const all=AL('ideas'),types=['Все',...new Set(all.map(i=>i.type).filter(Boolean))];if(!types.includes(IF))IF='Все';
+ $('i-sub').textContent=all.length?`${all.length} активных идей · обновлено ${A?.updated_at?new Date(A.updated_at).toLocaleDateString('ru-RU'):''}`:'Идеи от Финансиста';
+ $('i-chips').innerHTML=all.length?types.map(t=>`<button class="chip${t===IF?' a':''}" data-t="${esc(t)}">${esc(t)}</button>`).join(''):'';
+ const L=all.filter(i=>IF==='Все'||i.type===IF);$('i-list').innerHTML=L.length?L.map(ideaCard).join(''):`<div class="p" style="grid-column:1/-1">${noA()}</div>`;if(VIEW==='ideas')fillSparks($('i-list'))}
+$('i-chips').onclick=e=>{const b=e.target.closest('.chip');if(b){IF=b.dataset.t;renderIdeas()}};
+function renderDivs(){const d=AL('dividends').slice().sort((a,b)=>String(a.date).localeCompare(String(b.date)));
+ $('d-list').innerHTML=d.length?`<div style="overflow-x:auto"><table class="tbl"><tr><th>Тикер</th><th>Отсечка</th><th class="n">Дивиденд</th><th class="n">Доходность</th><th>Статус</th><th>Источник</th></tr>${d.map(x=>`<tr><td>${tkl(x.ticker)}</td><td>${esc(x.date||'')}</td><td class="n num au">${x.amount!=null?nf(N(x.amount))+' ₽':'—'}</td><td class="n num">${x.yield!=null?nf(N(x.yield),1)+'%':'—'}</td><td class="m">${esc(x.status||'')}</td><td class="src">${esc(x.source||'')}</td></tr>`).join('')}</table></div>`:noA()}
+let SEC='',SECN=0;
+async function renderSec(){const t=SEC;$('s-in').value=t;if(!t){$('s-h').textContent='Бумага';$('s-chart').innerHTML='<div class="empty"><b>Введите тикер</b>Например, SBER, LKOH или GAZP.</div>';$('s-div').innerHTML=$('s-cons').innerHTML=$('s-ideas').innerHTML='';$('s-px').textContent='—';$('s-ch').innerHTML='';$('s-stats').innerHTML='';return}
+ const my=++SECN,info=MKT.shares?.find(x=>x.id===t);$('s-h').textContent=t+(info?.name?' · '+info.name:'');
+ const cs=AL('consensus').find(c=>c.ticker===t),fcs=A?.forecasts?.[t]||null,ids=AL('ideas').filter(i=>i.ticker===t);
+ $('s-cons').innerHTML=cs?consRow(cs)+`<div class="row"><span class="m">Покупать ${+cs.buy||0} · Держать ${+cs.hold||0} · Продавать ${+cs.sell||0}</span></div>${cs.source?`<div class="src">Источник: ${esc(cs.source)}</div>`:''}`:noA();
+ $('s-ideas').innerHTML=(ids.length||fcs)?ids.map(i=>`<div class="row"><span class="side ${sideOf(i.side)}">${sideT[sideOf(i.side)]}</span><span class="num">цель ${nf(N(i.target))} · ${esc(i.horizon||'')}</span></div>`).join('')+(fcs?`<div class="row"><span class="m">Прогноз${fcs.horizon?' · '+esc(fcs.horizon):''}</span><span class="num">${nf(N(fcs.low))} – ${nf(N(fcs.high))}</span></div>${fcs.source?`<div class="src">Источник: ${esc(fcs.source)}</div>`:''}`:''):noA();
+ $('s-chart').innerHTML='<div class="sk">Загрузка…</div>';
+ try{const C=(await cand(t,270)).slice(-150);if(my!==SECN)return;if(C.length<5){$('s-chart').innerHTML='<div class="empty">Нет торгов по этому тикеру на TQBR.</div>';return}
+  const last=C.at(-1),px=info?.px??last.c,ch=info?.ch;$('s-px').textContent=nf(px)+' ₽';$('s-ch').innerHTML=pct(ch);
+  const fc=fcs?{low:N(fcs.low),base:N(fcs.base),high:N(fcs.high),label:'Прогноз'+(fcs.horizon?' '+fcs.horizon:'')}:null;$('s-legf').style.display=fc?'':'none';
+  const g=candles(C,fc);$('s-chart').innerHTML=g.svg;const r=C.slice(-31).map((c,i,a)=>i?Math.log(c.c/a[i-1].c):null).filter(x=>x!=null),mu=r.reduce((s,x)=>s+x,0)/r.length,vol=Math.sqrt(r.reduce((s,x)=>s+(x-mu)**2,0)/(r.length-1))*Math.sqrt(252)*100,v20=C.slice(-20).reduce((s,c)=>s+(c.v||0),0)/20;
+  $('s-stats').innerHTML=`<span>Волатильность (30д): <b style="color:var(--ink)">${nf(vol,1)}%</b></span><span>Мин./макс. 60 дн.: <b style="color:var(--ink)">${nf(g.sup)} / ${nf(g.res)} ₽</b></span><span>Ср. оборот (20д): <b style="color:var(--ink)">${nf(v20/1e9,2)} млрд ₽</b></span>`}catch(e){if(my===SECN)$('s-chart').innerHTML='<div class="empty">Мосбиржа не ответила, попробуйте позже.</div>'}
+ try{const j=await iss(`/securities/${encodeURIComponent(t)}/dividends.json?iss.only=dividends`);if(my!==SECN)return;const by={};for(const d of tab(j,'dividends')){if(d.currencyid&&d.currencyid!=='RUB')continue;const y=String(d.registryclosedate).slice(0,4);by[y]=(by[y]||0)+(+d.value||0)}
+  const ys=Object.keys(by).sort().slice(-6);if(!ys.length){$('s-div').innerHTML='<div class="empty">Мосбиржа не публикует выплат по этой бумаге.</div>';return}
+  const mx=Math.max(...ys.map(y=>by[y]))||1,bw=100/ys.length;$('s-div').innerHTML=`<svg viewBox="0 0 300 150" style="width:100%;height:auto">${ys.map((y,i)=>{const h=by[y]/mx*100;return `<rect x="${i*300/ys.length+10}" y="${120-h}" width="${300/ys.length-20}" height="${h}" rx="4" fill="#D4AF5A"/><text x="${i*300/ys.length+150/ys.length}" y="${114-h}" fill="#D4AF5A" font-size="11" text-anchor="middle">${nf(by[y],by[y]<10?2:1)}</text><text x="${i*300/ys.length+150/ys.length}" y="138" fill="#64748B" font-size="11" text-anchor="middle">${y}</text>`}).join('')}</svg><div class="src">По дате закрытия реестра, сумма за год</div>`}catch(e){if(my===SECN)$('s-div').innerHTML='<div class="empty">Мосбиржа не ответила.</div>'}}
+$('s-form').onsubmit=e=>{e.preventDefault();const v=$('s-in').value.trim().toUpperCase().replace(/[^A-Z0-9]/g,'');if(v)location.hash='sec/'+v};
+function renderAll(){badges();$('sbf').innerHTML=srcLine();renderHome();renderMarket();renderIdeas();renderDivs();if(VIEW==='sec')renderSec()}
+// ---------- навигация ----------
+const IC={home:'<path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>',market:'<path d="M3 20h18"/><path d="M5 16l4-5 4 3 6-8"/>',ideas:'<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/>',divs:'<circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1 1-1.6 2.5-1.6s2.5.7 2.5 1.7c0 2.6-5 1.4-5 4 0 1 1.1 1.7 2.5 1.7s2.5-.6 2.5-1.6"/>',sec:'<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>'};
+const NAV=[['home','Главная'],['market','Обзор рынка'],['ideas','Торговые идеи'],['divs','Дивиденды'],['sec','Бумага']],NAVM={home:'Главная',market:'Рынок',ideas:'Идеи',divs:'Дивиденды',sec:'Бумага'};
+$('snav').innerHTML=NAV.map(([k,n])=>`<button class="nav" data-v="${k}"><svg viewBox="0 0 24 24">${IC[k]}</svg>${n}</button>`).join('');$('tabs').innerHTML=NAV.map(([k])=>`<button data-v="${k}"><svg viewBox="0 0 24 24">${IC[k]}</svg>${NAVM[k]}</button>`).join('');
+document.addEventListener('click',e=>{const b=e.target.closest('[data-v]');if(b)location.hash=b.dataset.v==='sec'&&SEC?'sec/'+SEC:b.dataset.v});
+let VIEW='home';function route(){const h=decodeURIComponent(location.hash.slice(1));const [v,a]=h.split('/');VIEW=NAV.some(n=>n[0]===v)?v:'home';if(VIEW==='sec')SEC=(a||SEC||'').toUpperCase();
+ document.querySelectorAll('.v').forEach(s=>s.classList.toggle('on',s.id==='v-'+VIEW));document.querySelectorAll('[data-v]').forEach(b=>b.classList.toggle('a',b.dataset.v===VIEW));scrollTo(0,0);
+ if(VIEW==='sec')renderSec();if(VIEW==='ideas')fillSparks($('i-list'))}
+addEventListener('hashchange',route);
+// ---------- PIN (общий зашифрованный ключ, как у «Эверест консультант») ----------
+async function unpin(pin){const k0=await crypto.subtle.importKey('raw',new TextEncoder().encode(pin),'PBKDF2',false,['deriveKey']);
+ const k=await crypto.subtle.deriveKey({name:'PBKDF2',hash:'SHA-256',salt:b64(PINBLOB.salt),iterations:PINBLOB.iterations},k0,{name:'AES-GCM',length:256},false,['decrypt']);
+ const p=new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(PINBLOB.iv)},k,b64(PINBLOB.ct)));if(!p.startsWith(PFX))throw 0;return p.slice(PFX.length)}
+function pinGate(){return new Promise(done=>{const P=$('pin');P.style.display='flex';let v='',busy=false;const fk='inv.pinfail',ft='inv.pinwait';
+ const dots=()=>[...$('pind').children].forEach((i,n)=>i.classList.toggle('f',n<v.length)),wait=()=>Math.max(0,(+ls.g(ft)||0)-Date.now());
+ const idle=()=>PINBLOB&&window.crypto?.subtle?'Введите PIN':'PIN не задан · войдите по ключу';
+ const tick=()=>{const w=wait();if(w>0){$('pinm').textContent=`Неверный PIN. Повтор через ${Math.ceil(w/1000)} с`;setTimeout(tick,500)}else if(!busy&&!P.classList.contains('key'))$('pinm').textContent=idle()};tick();
+ const fin=()=>{P.classList.add('ok');setTimeout(()=>{P.style.display='none';P.classList.remove('ok','key');done()},matchMedia('(prefers-reduced-motion: reduce)').matches?0:520)};
+ const fail=m=>{$('pind').classList.remove('shake');void $('pind').offsetWidth;$('pind').classList.add('shake');P.classList.add('bad');setTimeout(()=>P.classList.remove('bad'),1600);if(navigator.vibrate)navigator.vibrate(150);v='';dots();busy=false;$('pinm').textContent=m;setTimeout(tick,1500)};
+ const go=async()=>{if(!PINBLOB)return fail('PIN не задан · войдите по ключу');busy=true;$('pinm').textContent='Проверка…';try{TOKEN=await unpin(v);ls.d(fk);ls.d(ft);fin()}catch(e){const n=(+ls.g(fk)||0)+1;ls.s(fk,n);ls.s(ft,Date.now()+(n<3?0:Math.min(300,2**(n-2)*5))*1000);fail('Неверный PIN')}};
+ const press=k=>{if(k==='key'){P.classList.add('key');$('pinm').textContent='Ключ GitHub';setTimeout(()=>$('keyi').focus(),50);return}if(busy||wait()>0||P.classList.contains('key'))return;if(k==='del'){v=v.slice(0,-1);return dots()}if(/^\d$/.test(k)&&v.length<4){v+=k;dots();if(v.length===4)go()}};
+ $('kp').onclick=e=>{const b=e.target.closest('button');if(b)press(b.dataset.k||b.textContent)};$('keyb').onclick=()=>{P.classList.remove('key');$('keyi').value='';tick()};
+ $('keyf').onsubmit=async e=>{e.preventDefault();const t=$('keyi').value.trim();if(!t)return;$('pinm').textContent='Проверка ключа…';
+  try{const r=await fetch(`https://api.github.com/repos/${REPO}`,{headers:{Authorization:'Bearer '+t},cache:'no-store'});if(!r.ok)throw 0;TOKEN=t;$('keyi').value='';fin()}catch(x){$('pinm').textContent='Ключ не подходит'}};
+ document.addEventListener('keydown',e=>{if(P.style.display!=='none'&&!P.classList.contains('key')){if(/^\d$/.test(e.key))press(e.key);else if(e.key==='Backspace')press('del')}})})}
+// PIN при каждом открытии: разблокировка только в памяти вкладки, ничего не сохраняется между открытиями
+let HID=0;const relock=()=>{TOKEN='';A=null};
+addEventListener('pagehide',relock);addEventListener('pageshow',e=>{if(e.persisted)location.reload()});
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')HID=Date.now();else if(HID&&Date.now()-HID>60000){relock();location.reload()}});
+(async()=>{route();renderAll();loadMkt().catch(()=>{MKT.at=new Date();renderAll()});await pinGate();await loadA();setInterval(()=>{if(document.visibilityState==='visible'){loadMkt().catch(()=>{});if(TOKEN)loadA()}},120000)})();
+</script></body></html>

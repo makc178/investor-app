@@ -1,6 +1,6 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0B1426"><meta name="robots" content="noindex,nofollow">
-<title>Инвестор</title><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=36a890c"><link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png?v=36a890c"><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=36a890c"><link rel="manifest" href="manifest.webmanifest?v=36a890c">
+<title>Инвестор</title><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=c66591e"><link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png?v=c66591e"><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=c66591e"><link rel="manifest" href="manifest.webmanifest?v=c66591e">
 <meta name="apple-mobile-web-app-title" content="Инвестор"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
 <style>
 :root{--bg:#0A0F1C;--pan:#111827;--line:#1F2937;--ink:#E5E7EB;--mut:#94A3B8;--dim:#64748B;--au:#D4AF5A;--au2:#F3D98B;--g:#22C55E;--r:#EF4444;--gr:#64748B}
@@ -20,7 +20,7 @@ main{margin-left:208px;padding:18px 22px 22px;max-width:1500px}
 .row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid #1a2333}.row:last-child{border:0}.tk{font-weight:600}
 a.tk,.lnk{color:inherit;text-decoration:none;cursor:pointer}a.tk:hover,.lnk:hover{color:var(--au)}
 .grid{display:grid;gap:14px}.big{font-size:28px;font-weight:700}
-.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:14px}.tile .l{font-size:12px;color:var(--mut)}.tile .v{font-size:20px;font-weight:600;margin:2px 0}.tile .c{font-size:12px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:14px}.tile .l{font-size:12px;color:var(--mut)}.tile .tv{font-size:20px;font-weight:600;margin:2px 0}.tile .c{font-size:12px}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.chip{padding:6px 13px;border:1px solid var(--line);border-radius:20px;color:var(--mut);background:var(--pan)}.chip.a{color:#0A0F1C;background:var(--au);border-color:var(--au);font-weight:600}
 .empty{color:var(--mut);text-align:center;padding:26px 10px;font-size:13px;line-height:1.5}.empty b{display:block;color:var(--ink);font-weight:500;margin-bottom:4px}
 .disc{font-size:11px;color:var(--dim);text-align:center;margin:18px auto 0;max-width:980px;line-height:1.5}
@@ -69,15 +69,15 @@ a.tk,.lnk{color:inherit;text-decoration:none;cursor:pointer}a.tk:hover,.lnk:hove
 @media(max-width:760px) and (max-height:700px){#pin .kp{grid-template-columns:repeat(3,64px);gap:12px 24px}#pin .kp button{width:64px;height:64px;font-size:26px}#pin .wrap{padding-top:24px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style></head><body>
-<div id="pin"><div class="wrap"><section class="brand"><img src="icon-512.png?v=36a890c" alt="Инвестор"><div class="word">ИНВЕСТОР</div><div class="rule"></div><div class="tag">ЛИЧНЫЙ КАБИНЕТ</div></section>
+<div id="pin"><div class="wrap"><section class="brand"><img src="icon-512.png?v=c66591e" alt="Инвестор"><div class="word">ИНВЕСТОР</div><div class="rule"></div><div class="tag">ЛИЧНЫЙ КАБИНЕТ</div></section>
 <section class="card"><div class="msg" id="pinm" aria-live="polite">Введите PIN</div><div class="dots" id="pind"><i></i><i></i><i></i><i></i></div>
 <div class="kp" id="kp"><button>1</button><button>2</button><button>3</button><button>4</button><button>5</button><button>6</button><button>7</button><button>8</button><button>9</button><button class="x" data-k="key" aria-label="Войти по ключу GitHub"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l2 2M15 8l2 2"/></svg>КЛЮЧ</button><button>0</button><button class="x" data-k="del" aria-label="Стереть"><svg viewBox="0 0 24 24"><path d="M9 5h11v14H9l-6-7z"/><path d="M12.5 9.5l5 5M17.5 9.5l-5 5"/></svg></button></div>
 <form class="keyf" id="keyf"><input id="keyi" type="password" autocomplete="off" placeholder="Ключ GitHub (github_pat_…)"><button class="btn" type="submit">Войти по ключу</button><button class="back" type="button" id="keyb">← Назад к PIN</button></form>
 <div class="foot">Инвестор · данные защищены</div></section></div></div>
 
-<aside class="sb"><div class="logo"><img src="icon-192.png?v=36a890c" alt="">Инвестор</div><div id="snav"></div><div class="sbf" id="sbf"></div></aside>
+<aside class="sb"><div class="logo"><img src="icon-192.png?v=c66591e" alt="">Инвестор</div><div id="snav"></div><div class="sbf" id="sbf"></div></aside>
 <main>
-<div class="mlogo"><img src="icon-192.png?v=36a890c" alt="">Инвестор</div>
+<div class="mlogo"><img src="icon-192.png?v=c66591e" alt="">Инвестор</div>
 <section class="v" id="v-home"><div class="top"><div><h1>Главная</h1><div class="sub" id="hello"></div></div><span class="badge off" id="bd-home"></span></div>
  <div class="tiles" id="h-tiles"></div>
  <div class="grid cols" style="grid-template-columns:2fr 1fr">
@@ -110,14 +110,14 @@ a.tk,.lnk{color:inherit;text-decoration:none;cursor:pointer}a.tk:hover,.lnk:hove
  <div class="grid cols" style="grid-template-columns:2fr 1fr">
   <div class="p"><div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px"><div><span class="big num" id="s-px">—</span> <span id="s-ch" class="num"></span></div><div class="leg"><span><i style="background:#60A5FA"></i>MA20</span><span><i style="background:var(--au)"></i>MA50</span><span><i style="background:var(--g)"></i>Мин. 60 дн.</span><span><i style="background:var(--r)"></i>Макс. 60 дн.</span><span id="s-legf" style="display:none"><i style="background:#94A3B8"></i>Прогноз</span></div></div>
    <div id="s-chart" style="margin-top:10px"><div class="sk">Загрузка…</div></div><div class="leg" id="s-stats" style="margin-top:8px;color:var(--mut)"></div></div>
-  <div class="grid" style="align-content:start"><div class="p"><div class="t">Дивиденды на акцию, ₽ · Мосбиржа</div><div id="s-div"></div></div>
+  <div class="grid" style="align-content:start"><div class="p"><div class="t">Дивиденды на акцию, ₽</div><div id="s-div"></div></div>
    <div class="p"><div class="t">Консенсус аналитиков</div><div id="s-cons"></div></div><div class="p"><div class="t">Идеи и прогнозы</div><div id="s-ideas"></div></div></div>
  </div><div class="disc">Материалы носят информационно-аналитический характер, не являются индивидуальной инвестиционной рекомендацией и офертой. Мнения аналитиков приведены со ссылкой на источник. Прогнозы не гарантируют доходности; решения об инвестициях принимаются самостоятельно, с учётом рисков потери средств.</div></section>
 </main>
 <nav id="tabs"></nav>
 <script>
 "use strict";
-const REPO='makc178/investor-data',BRANCH='main',PINBLOB={"v": 1, "bv": 1791805800, "kind": "write", "kdf": "PBKDF2-SHA256", "iterations": 600000, "salt": "n4IpekB0ABUps1IgRJ4KyQ==", "iv": "lsvG/NbAWJNMTqC5", "ct": "2V3d94PWP7JTMFne5RgmpDIf05bfFbpXwnWHUvMT94RUr0rZCGKPBCLcS41l+9ipcJ6zungUKB9K6kQWZUh79XFsnIiCZgzIwIqQPiRLs/HBMv78ZMchk797GAGCt6zSmzalv+KFDIxlNastiHy3O2QTWPM="},PFX='claims:',ISS='https://iss.moex.com/iss';
+const REPO='makc178/investor-data',BRANCH='main',PINBLOB={"v": 1, "bv": 1791806214, "kind": "write", "kdf": "PBKDF2-SHA256", "iterations": 600000, "salt": "Ate+zv9WRgxV+Q8POzDXfA==", "iv": "wm1M9QC5bMZEAY1b", "ct": "aZZ5n5lga5oP5Xj7wTSVh/8TsBDaR3NWUmDdMmtmKquZcT1nwQaWuMDFMzaeD2PVvF96g1z3VQATsVKTEIRkHosTNMYz3wz5sEMl+H1g8wIxMggeccgCyKFB0ddeTWL3bZof3+pW34NlyTZWuifWBZOV9ZM="},PFX='claims:',ISS='https://iss.moex.com/iss';
 const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const ls={g:k=>{try{return localStorage.getItem(k)}catch(e){return null}},s:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}},d:k=>{try{localStorage.removeItem(k)}catch(e){}}};
 let TOKEN='',A=null,AERR='',MKT={};
@@ -171,7 +171,7 @@ async function loadA(){if(!TOKEN)return;AERR='';try{const [k,e]=await Promise.al
   const key=await crypto.subtle.importKey('raw',b64(k.k),'AES-GCM',false,['decrypt']);A=JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(e.iv)},key,b64(e.ct))))}}catch(x){A=null;AERR=x.message||String(x)}renderAll()}
 const AL=k=>Array.isArray(A?.[k])?A[k]:[];
 // ---------- отрисовка ----------
-const tile=(l,v,c,sub)=>`<div class="p tile"><div class="l">${l}</div><div class="v num">${v}</div><div class="c">${c??''}${sub?` <span class="m">${esc(sub)}</span>`:''}</div></div>`;
+const tile=(l,v,c,sub)=>`<div class="p tile"><div class="l">${l}</div><div class="tv num">${v}</div><div class="c">${c??''}${sub?` <span class="m">${esc(sub)}</span>`:''}</div></div>`;
 function tilesHTML(full){const m=MKT,ind=Array.isArray(A?.market?.indicators)?A.market.indicators:[];let s='';
  s+=tile('IMOEX',m.IMOEX?nf(m.IMOEX.v):'—',m.IMOEX?pct(m.IMOEX.c):'')+tile('RGBI',m.RGBI?nf(m.RGBI.v):'—',m.RGBI?pct(m.RGBI.c):'')+tile('USD/RUB',m.USD000UTSTOM?nf(m.USD000UTSTOM.v)+' ₽':'—',m.USD000UTSTOM?pct(m.USD000UTSTOM.c):'')+tile('CNY/RUB',m.CNYRUB_TOM?nf(m.CNYRUB_TOM.v,3)+' ₽':'—',m.CNYRUB_TOM?pct(m.CNYRUB_TOM.c):'');
  if(full)for(const i of ind.slice(0,4))s+=tile(esc(i.name),esc(i.value),i.change!=null&&i.change!==''?pct(N(i.change)):'',i.note);return s}
@@ -219,8 +219,10 @@ async function renderSec(){const t=SEC;$('s-in').value=t;if(!t){$('s-h').textCon
   const g=candles(C,fc);$('s-chart').innerHTML=g.svg;const r=C.slice(-31).map((c,i,a)=>i?Math.log(c.c/a[i-1].c):null).filter(x=>x!=null),mu=r.reduce((s,x)=>s+x,0)/r.length,vol=Math.sqrt(r.reduce((s,x)=>s+(x-mu)**2,0)/(r.length-1))*Math.sqrt(252)*100,v20=C.slice(-20).reduce((s,c)=>s+(c.v||0),0)/20;
   $('s-stats').innerHTML=`<span>Волатильность (30д): <b style="color:var(--ink)">${nf(vol,1)}%</b></span><span>Мин./макс. 60 дн.: <b style="color:var(--ink)">${nf(g.sup)} / ${nf(g.res)} ₽</b></span><span>Ср. оборот (20д): <b style="color:var(--ink)">${nf(v20/1e9,2)} млрд ₽</b></span>`}catch(e){if(my===SECN)$('s-chart').innerHTML='<div class="empty">Мосбиржа не ответила, попробуйте позже.</div>'}
  try{const j=await iss(`/securities/${encodeURIComponent(t)}/dividends.json?iss.only=dividends`);if(my!==SECN)return;const by={};for(const d of tab(j,'dividends')){if(d.currencyid&&d.currencyid!=='RUB')continue;const y=String(d.registryclosedate).slice(0,4);by[y]=(by[y]||0)+(+d.value||0)}
-  const ys=Object.keys(by).sort().slice(-6);if(!ys.length){$('s-div').innerHTML='<div class="empty">Мосбиржа не публикует выплат по этой бумаге.</div>';return}
-  const mx=Math.max(...ys.map(y=>by[y]))||1,bw=100/ys.length;$('s-div').innerHTML=`<svg viewBox="0 0 300 150" style="width:100%;height:auto">${ys.map((y,i)=>{const h=by[y]/mx*100;return `<rect x="${i*300/ys.length+10}" y="${120-h}" width="${300/ys.length-20}" height="${h}" rx="4" fill="#D4AF5A"/><text x="${i*300/ys.length+150/ys.length}" y="${114-h}" fill="#D4AF5A" font-size="11" text-anchor="middle">${nf(by[y],by[y]<10?2:1)}</text><text x="${i*300/ys.length+150/ys.length}" y="138" fill="#64748B" font-size="11" text-anchor="middle">${y}</text>`}).join('')}</svg><div class="src">По дате закрытия реестра, сумма за год</div>`}catch(e){if(my===SECN)$('s-div').innerHTML='<div class="empty">Мосбиржа не ответила.</div>'}}
+  const hist=A?.dividend_history?.[t];if(!Object.keys(by).length&&hist&&typeof hist==='object')for(const y in hist)by[y]=N(hist[y]);
+  const ys=Object.keys(by).filter(y=>by[y]!=null).sort().slice(-6),up=AL('dividends').filter(d=>d.ticker===t),upH=up.map(d=>`<div class="row"><span>Отсечка ${esc(d.date||'—')}</span><span class="num au">${d.amount!=null?nf(N(d.amount))+' ₽':'—'}${d.yield!=null?` <span class="m">· ${nf(N(d.yield),1)}%</span>`:''}</span></div>`).join('');
+  if(!ys.length){$('s-div').innerHTML=upH||noA();return}
+  const mx=Math.max(...ys.map(y=>by[y]))||1,bw=100/ys.length;$('s-div').innerHTML=`<svg viewBox="0 0 300 150" style="width:100%;height:auto">${ys.map((y,i)=>{const h=by[y]/mx*100;return `<rect x="${i*300/ys.length+10}" y="${120-h}" width="${300/ys.length-20}" height="${h}" rx="4" fill="#D4AF5A"/><text x="${i*300/ys.length+150/ys.length}" y="${114-h}" fill="#D4AF5A" font-size="11" text-anchor="middle">${nf(by[y],by[y]<10?2:1)}</text><text x="${i*300/ys.length+150/ys.length}" y="138" fill="#64748B" font-size="11" text-anchor="middle">${y}</text>`}).join('')}</svg>${upH}<div class="src">Сумма за год по дате закрытия реестра</div>`}catch(e){if(my===SECN)$('s-div').innerHTML=noA()}}
 $('s-form').onsubmit=e=>{e.preventDefault();const v=$('s-in').value.trim().toUpperCase().replace(/[^A-Z0-9]/g,'');if(v)location.hash='sec/'+v};
 function renderAll(){badges();$('sbf').innerHTML=srcLine();renderHome();renderMarket();renderIdeas();renderDivs();if(VIEW==='sec')renderSec()}
 // ---------- навигация ----------

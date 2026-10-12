@@ -1,6 +1,6 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0B1426"><meta name="robots" content="noindex,nofollow">
-<title>Инвестор</title><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=884d1cd"><link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png?v=884d1cd"><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=884d1cd"><link rel="manifest" href="manifest.webmanifest?v=884d1cd">
+<title>Инвестор</title><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=af28de5"><link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png?v=af28de5"><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=af28de5"><link rel="manifest" href="manifest.webmanifest?v=af28de5">
 <meta name="apple-mobile-web-app-title" content="Инвестор"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
 <style>
 :root{--bg:#0A0F1C;--pan:#111827;--line:#1F2937;--ink:#E5E7EB;--mut:#94A3B8;--dim:#64748B;--au:#D4AF5A;--au2:#F3D98B;--g:#22C55E;--r:#EF4444;--gr:#64748B}
@@ -81,15 +81,15 @@ a.tk,.lnk{color:inherit;text-decoration:none;cursor:pointer}a.tk:hover,.lnk:hove
 .sc{position:relative;height:4px;border-radius:2px;background:#1a2333;margin:16px 4px 16px}.sc .z{position:absolute;top:0;bottom:0;background:rgba(212,175,90,.45)}.sc .s,.sc .tg{position:absolute;top:-3px;width:2px;height:10px}.sc .s{background:#B85C5C}.sc .tg{background:var(--g)}.sc .mk{position:absolute;top:-5px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--ink);border:2px solid var(--au)}.sc .lb{position:absolute;top:9px;font-size:10px;color:var(--mut);transform:translateX(-50%);white-space:nowrap}.sc .lb.l{transform:none}.sc .lb.r{transform:translateX(-100%)}.pxr{display:flex;align-items:center;gap:10px}.pxr .sc{flex:1}
 .at{font-size:12px;border-top:1px solid #1a2333;padding-top:6px;margin-top:2px}.at .q{font-style:italic;opacity:.85;margin:2px 0}
 </style></head><body>
-<div id="pin"><div class="wrap"><section class="brand"><img src="icon-512.png?v=884d1cd" alt="Инвестор"><div class="word">ИНВЕСТОР</div><div class="rule"></div><div class="tag">ЛИЧНЫЙ КАБИНЕТ</div></section>
+<div id="pin"><div class="wrap"><section class="brand"><img src="icon-512.png?v=af28de5" alt="Инвестор"><div class="word">ИНВЕСТОР</div><div class="rule"></div><div class="tag">ЛИЧНЫЙ КАБИНЕТ</div></section>
 <section class="card"><div class="msg" id="pinm" aria-live="polite">Введите PIN</div><div class="dots" id="pind"><i></i><i></i><i></i><i></i></div>
 <div class="kp" id="kp"><button>1</button><button>2</button><button>3</button><button>4</button><button>5</button><button>6</button><button>7</button><button>8</button><button>9</button><button class="x" data-k="key" aria-label="Войти по ключу GitHub"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l2 2M15 8l2 2"/></svg>КЛЮЧ</button><button>0</button><button class="x" data-k="del" aria-label="Стереть"><svg viewBox="0 0 24 24"><path d="M9 5h11v14H9l-6-7z"/><path d="M12.5 9.5l5 5M17.5 9.5l-5 5"/></svg></button></div>
 <form class="keyf" id="keyf"><input id="keyi" type="password" autocomplete="off" placeholder="Ключ GitHub (github_pat_…)"><button class="btn" type="submit">Войти по ключу</button><button class="back" type="button" id="keyb">← Назад к PIN</button></form>
 <div class="foot">Инвестор · данные защищены</div></section></div></div>
 
-<aside class="sb"><div class="logo"><img src="icon-192.png?v=884d1cd" alt="">Инвестор</div><div id="snav"></div><div class="sbf" id="sbf"></div></aside>
+<aside class="sb"><div class="logo"><img src="icon-192.png?v=af28de5" alt="">Инвестор</div><div id="snav"></div><div class="sbf" id="sbf"></div></aside>
 <main>
-<div class="mlogo"><img src="icon-192.png?v=884d1cd" alt="">Инвестор</div>
+<div class="mlogo"><img src="icon-192.png?v=af28de5" alt="">Инвестор</div>
 <section class="v" id="v-home"><div class="top"><div><h1>Главная</h1><div class="sub" id="hello"></div></div><span class="badge off" id="bd-home"></span></div>
  <div class="tiles" id="h-tiles"></div>
  <div class="grid cols" style="grid-template-columns:2fr 1fr">
@@ -187,9 +187,10 @@ const candC={};async function cand(t,days){const k=t+days;if(candC[k])return can
  return candC[k]=out.map(r=>({d:r.begin,o:r.open,c:r.close,h:r.high,l:r.low,v:r.value}))}
 // ---------- закрытые данные (зашифрованы) ----------
 const b64=x=>Uint8Array.from(atob(x),c=>c.charCodeAt(0));
-const ghRaw=async p=>{const r=await fetch(`https://api.github.com/repos/${REPO}/contents/${p}?ref=${BRANCH}&_=${Date.now()}`,{headers:{Authorization:'Bearer '+TOKEN,Accept:'application/vnd.github.raw+json','X-GitHub-Api-Version':'2022-11-28'},cache:'no-store'});
- if(r.status===404)return null;if(r.status===401||r.status===403)throw new Error('ключ не даёт доступа к закрытому хранилищу «'+REPO+'»');if(!r.ok)throw new Error('GitHub '+r.status);return r.json()};
-async function loadA(){if(!TOKEN)return;AERR='';try{const [k,e]=await Promise.all([ghRaw('key.json'),ghRaw('analysis.enc.json')]);if(!k||!e){A=null}else{
+const REPO2='makc178/claims-registry-data',P2='investor/';
+const ghRaw=async(p,rp=REPO)=>{const r=await fetch(`https://api.github.com/repos/${rp}/contents/${p}?ref=${BRANCH}&_=${Date.now()}`,{headers:{Authorization:'Bearer '+TOKEN,Accept:'application/vnd.github.raw+json','X-GitHub-Api-Version':'2022-11-28'},cache:'no-store'});
+ if(r.status===404)return null;if(r.status===401||r.status===403)throw new Error('ключ не даёт доступа к закрытому хранилищу «'+rp+'»');if(!r.ok)throw new Error('GitHub '+r.status);return r.json()};
+async function loadA(){if(!TOKEN)return;AERR='';try{let [k,e]=await Promise.all([ghRaw(P2+'key.json',REPO2).catch(()=>null),ghRaw(P2+'analysis.enc.json',REPO2).catch(()=>null)]);if(!k||!e)[k,e]=await Promise.all([ghRaw('key.json'),ghRaw('analysis.enc.json')]);if(!k||!e){A=null;AERR='Ключ PIN не видит закрытые данные аналитики (GitHub 404). Нажмите ⟳ или сообщите Сисадмину.'}else{
   const key=await crypto.subtle.importKey('raw',b64(k.k),'AES-GCM',false,['decrypt']);A=normA(JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(e.iv)},key,b64(e.ct)))))}}catch(x){A=null;AERR=x.message||String(x)}renderAll()}
 
 // Приводим формат Финансиста (analysis.json) к внутреннему виду; уже «внутренние» поля оставляем как есть

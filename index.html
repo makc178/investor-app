@@ -539,4 +539,5 @@ let HID=0;const relock=()=>{TOKEN='';A=null};
 addEventListener('pagehide',relock);addEventListener('pageshow',e=>{if(e.persisted)location.reload()});
 document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')HID=Date.now();else if(HID&&Date.now()-HID>60000){relock();location.reload()}});
 (async()=>{route();renderAll();loadMkt().catch(()=>{MKT.at=new Date();renderAll()});await pinGate();await loadA();setInterval(()=>{if(document.visibilityState==='visible'){loadMkt().catch(()=>{});if(TOKEN)loadA()}},120000)})();
-</script></body></html>
+</script><script src="updlog.js?v=04efda35" defer></script>
+</body></html>
